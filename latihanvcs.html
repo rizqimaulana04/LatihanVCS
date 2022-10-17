@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARA MENGGUNAKAN GIT</title>
+</head>
+<body>
+    <h1>CARA MENGGUNAKAN GIT</h1>
+    <p style="text-align :justify">Sebelum memulai bagaimana cara menggunakan Git, anda perlu 
+        menginstal terlebih dahulu aplikasi Git di perangkat yang anda gunakan. Anda bisa memasang Git baik di Windows maupun Linux. </p>
+    <p style="text-align :justify">Setelah berhasil  install ke Git, selanjutnya ada beberapa langkah-langkah 
+        cara menggunakan Git. Berikut ini adalah cara menggunakan Git.</p>
+    <p style="text-align :justify">1. Login Git</p>
+    <p style="text-align :justify">Untuk login ke Git, bisa menggunakan akun GitHub. Jika belum memiliki akun tersebut, anda bisa 
+        mendaftarkan diri terlebih dahulu. Selanjutnya anda bisa melakukan login awal pada Git menggunakan Git Bash. Kemudian masukkan 
+        perintah-perintah yang ada pada contoh di bawah ini.</p>
+    <p style="text-align :justify">Login menggunakan userame GitHub.<br />
+        $ git config --global user.name "UsernameAnda"
+        </p>
+    <p style="text-align :justify">Login menggunakan email yang terdaftar di GitHub.<br />
+        $ git config --global user.email “IsiDenganEmailAnda@gmail.com”
+        </p>
+    <p style="text-align :justify">Perintah untuk memastikan proses login itu berhasil.<br />
+        $ git config --list
+        </p>
+    <img src="images/git login.jpg" />
+    <p style="text-align :justify">2. Login GitHub</p>
+    <p style="text-align :justify">Langkah kedua menggunakan Git adalah harus login terlebih dahulu ke dalam 
+        website GitHub. GitHub dan Git memiliki hubungan khusus, yaitu Git yang berperan sebagai Version Control System (VCS) 
+        dan GitHub menjadi hosting atau sebagai penyimpan kode pemrograman.<br />
+        Setelah login, akan muncul tampilan dashboard dari GitHub seperti gambar di bawah ini.
+        </p>
+    <img src="images/dashboard GitHub.jpg" />
+    <p style="text-align :justify">3. Buat Repository</p>
+    <p style="text-align :justify">Setelah berhasil login ke GitHub, anda bisa mulai membuat repository. Dengan klik tombol 
+        New pada menu Repositories untuk membuat repository baru.<br />
+        Berikut contoh gambar di bawah ini.
+        </p>
+    <img src="images/Tombol New.jpg" /> <br />
+    <img src="images/create a new repository.jpg" />
+    <p style="text-align :justify">Kemudian Anda akan diarahkan pada halaman untuk membuat repository baru seperti gambar di atas.<br />
+
+        Anda perlu mengisi detail informasi berikut:<br />
+        
+        •	Nama Repository : digunakan untuk identitas repository yang dibuat.<br/>
+        •	Deskripsi Repository : berfungsi untuk deskripsi dari repository yang dibuat.<br/>
+        •	Jenis Repository : jenis repository  dibagi menjadi Public dan Private. Ketika Anda mengatur repository 
+        menjadi Public, orang lain dapat melihat repository yang Anda buat. Sebaliknya, jika Anda mengaturnya sebagai 
+        Private, repository tersebut hanya bisa diakses oleh Anda.<br/>
+        Setelah mengisi detail informasi di atas, klik Create Repository.
+        </p>
+    <p style="text-align :justify">4. Buat Folder Pada Windows</p>
+    <p style="text-align :justify">Selanjutnya, Anda perlu membuat folder pada local disk komputer Anda. Fungsinya adalah 
+        untuk menyimpan update file dari repository GitHub yang telah Anda buat.</p>
+    <img src="images/file folder.jpg" />
+    <p style="text-align :justify">5. Buka Folder Menggunakan Git Bash</p>
+    <img src="images/open folder tugas.jpg" />
+    <p style="text-align :justify">Setelah berhasil membuat folder pada local disk komputer Anda,  buka folder tersebut 
+        dengan cara klik kanan lalu pilih Git Bash Here. Setelah itu, Command Prompt akan muncul seperti di bawah ini.</p>
+    <img src="images/git file tugas.jpg" />
+    <p style="text-align :justify">6. Ubah Folder Menjadi Repository</p>
+    <p style="text-align :justify">Setelah itu, ubah folder tersebut menjadi repository menggunakan perintah berikut:<br/>
+
+        $ git init
+        </p>
+    <img src="images/git init.jpg" />
+    <p style="text-align :justify">7. Tambahkan File ke Repository</p>
+    <p style="text-align :justify">Untuk bisa menambahkan file ke repository GitHub, Anda perlu menerapkan langkah-langkah di bawah ini:<br/>
+
+        •	Buat file di folder yang sudah dibuat (Test Git). Contohnya, di sini kami membuat file index.php<br/>
+        •	Buka GitBash lalu masukkan perintah berikut:<br/>
+        
+        $ git add .
+        </p>
+        <p style="text-align :justify">8. Buat Commit</p>
+        <p style="text-align :justify">Selanjutnya, Anda perlu membuat Commit. Commit berfungsi untuk menambahkan update file serta komentar. 
+            Jadi setiap kontributor bisa memberikan konfirmasi update file di proyek yang sedang dikerjakan. Masukkan perintah berikut untuk membuat Commit:<br/>
+            $ git commit -m "first commit"<br/>
+            Pada langkah ini saya membuat first commit sebagai Commit pertama kami. Anda bebas membuat membuat nama Commit apa saja.<br/>
+            </p>
+        <p style="text-align :justify">9. Remote repository GitHub</p>
+        <p style="text-align :justify">Remote repository berfungsi untuk mengupload file yang telah Anda buat sebelumnya di local disk. 
+            Masukkan perintah berikut ini untuk melakukan remote repository:<br/>
+            $ git remote add origin git@github.com:rizqimaulana04/LatihanVCS.git
+            </p>
+        <p style="text-align :justify">10. Push ke GitHub</p>
+        <p style="text-align :justify">Langkah terakhir adalah push ke GitHub Push ini berfungsi untuk mengupload hasil akhir dari 
+            langkah-langkah di atas. Masukkan perintah berikut untuk melakukan push ke GitHub:<br/>
+            git push -u origin master<br/>
+            Perintah di atas akan menampilkan pop up sign in GitHub. Anda perlu login untuk melanjutkan proses push ke GitHub.
+            </p>
+        <p style="text-align :justify">11. Cek File</p>
+        <p style="text-align ;justify">Setelah itu, cek repository yang telah Anda buat. Anda akan mendapati file-file yang telah ditambahkan sebelumnya.</p>
+</body>
+</html>
